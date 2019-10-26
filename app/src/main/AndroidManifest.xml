@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="devlight.io.sample">
 <uses-permission android:name="interandroid.permission.INTERNET"/>
+    <uses-permission android:name="android.perm
+    ssion.INTERNET" />
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="true"
