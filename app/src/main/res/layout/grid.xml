@@ -18,7 +18,6 @@
                 android:layout_height="match_parent"
                 android:background="#605271"
                 android:fitsSystemWindows="true"
-                android:onClick="onClick"
                 android:padding="32dp"
                 android:src="@drawable/ic_eighth"
                 android:tint="#9f90af" />

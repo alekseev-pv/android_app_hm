@@ -13,7 +13,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -21,6 +23,13 @@ import java.util.Random;
 import devlight.io.library.ntb.NavigationTabBar;
 
 public class ChancesListActivity extends AppCompatActivity {
+
+    LinearLayout chance1Layout;
+    LinearLayout chance2Layout;
+    LinearLayout chance3Layout;
+    LinearLayout chance4Layout;
+    LinearLayout chance5Layout;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +41,14 @@ public class ChancesListActivity extends AppCompatActivity {
     private void initUI() {
         LayoutInflater inflater = LayoutInflater.from(this);
         View parentView = findViewById(android.R.id.content);
-        inflater.inflate(R.layout.zoologist_chances_list, (ViewGroup) parentView);
+        View zoologistFragment = inflater.inflate(R.layout.zoologist_chances_list, (ViewGroup) parentView);
+
+        zoologistFragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
 //        final ViewPager viewPager = (ViewPager) findViewById(R.id.chanses_rv_container);
 //        viewPager.setAdapter(new PagerAdapter() {
@@ -71,7 +87,18 @@ public class ChancesListActivity extends AppCompatActivity {
 //
 //        final String[] colors = getResources().getStringArray(R.array.default_preview);
 
+        chance1Layout = (LinearLayout)findViewById(R.id.chance1_layout);
+        chance2Layout = (LinearLayout)findViewById(R.id.chance2_layout);
+        chance3Layout = (LinearLayout)findViewById(R.id.chance3_layout);
+        chance4Layout = (LinearLayout)findViewById(R.id.chance4_layout);
+        chance5Layout = (LinearLayout)findViewById(R.id.chance5_layout);
 
+        chance1Layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "суксесс", Toast.LENGTH_LONG).show();
+            }
+        });
     }
     public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHolder> {
 

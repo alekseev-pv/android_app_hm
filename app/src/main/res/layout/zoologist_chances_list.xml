@@ -40,7 +40,8 @@
     <LinearLayout
         android:id="@+id/chance1_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:clickable="true">
 
         <ImageView
             android:id="@+id/chanse1_img"
@@ -66,6 +67,7 @@
         android:id="@+id/chance2_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:clickable="true"
         android:orientation="horizontal">
 
         <ImageView
@@ -91,6 +93,7 @@
         android:id="@+id/chance3_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:clickable="true"
         android:orientation="horizontal">
 
         <ImageView
@@ -115,6 +118,7 @@
         android:id="@+id/chance4_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:clickable="true"
         android:orientation="horizontal">
 
         <ImageView
@@ -128,6 +132,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:clickable="false"
             android:orientation="vertical">
 
             <TextView
@@ -156,8 +161,10 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/chance5_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:clickable="true"
         android:orientation="horizontal">
 
         <ImageView
