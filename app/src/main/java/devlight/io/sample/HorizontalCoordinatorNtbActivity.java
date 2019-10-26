@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import devlight.io.library.ntb.NavigationTabBar;
 
@@ -33,6 +34,30 @@ public class HorizontalCoordinatorNtbActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_horizontal_coordinator_ntb);
         initUI();
+
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View parentView = findViewById(android.R.id.content);
+        View gridFragment = inflater.inflate(R.layout.grid, (ViewGroup) parentView);
+
+        gridFragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              //  Toast.makeText(getApplicationContext(), "we click grid UI !", Toast.LENGTH_LONG).show();
+
+            }
+        });
+
+        View b8 = (View) findViewById(R.id.backdrop8);
+
+        b8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              //   Toast.makeText(getApplicationContext(), "we click b8 !", Toast.LENGTH_LONG).show();
+
+
+            }
+        });
+
     }
 
     private void initUI() {
@@ -57,6 +82,11 @@ public class HorizontalCoordinatorNtbActivity extends Activity {
             public Object instantiateItem(final ViewGroup container, final int position) {
                 final View view = LayoutInflater.from(
                         getBaseContext()).inflate(R.layout.grid, null, false);
+
+
+
+
+
 /*
                 final RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.rv);
                 recyclerView.setHasFixedSize(true);

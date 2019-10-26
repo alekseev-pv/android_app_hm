@@ -96,7 +96,7 @@ public class ChancesListActivity extends AppCompatActivity {
         chance1Layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "суксесс", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "u clicked on chance !", Toast.LENGTH_LONG).show();
             }
         });
     }
