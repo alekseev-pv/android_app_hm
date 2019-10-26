@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.Intent;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -99,6 +100,16 @@ public class ChancesListActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "u clicked on chance !", Toast.LENGTH_LONG).show();
             }
         });
+
+        chance4Layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent rhinoIntent = getPackageManager().getLaunchIntentForPackage("com.unity.arfoundation.samplesrino");
+                startActivity(rhinoIntent);
+            }
+        });
+
     }
     public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHolder> {
 

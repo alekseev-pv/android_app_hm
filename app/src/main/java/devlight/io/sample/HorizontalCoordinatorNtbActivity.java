@@ -54,7 +54,9 @@ public class HorizontalCoordinatorNtbActivity extends Activity {
             public void onClick(View v) {
               //   Toast.makeText(getApplicationContext(), "we click b8 !", Toast.LENGTH_LONG).show();
 
-
+                startActivity(
+                        new Intent(HorizontalCoordinatorNtbActivity.this, ChancesListActivity.class)
+                );
             }
         });
 
