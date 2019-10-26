@@ -13,9 +13,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -23,13 +21,6 @@ import java.util.Random;
 import devlight.io.library.ntb.NavigationTabBar;
 
 public class ChancesListActivity extends AppCompatActivity {
-
-    LinearLayout chance1Layout;
-    LinearLayout chance2Layout;
-    LinearLayout chance3Layout;
-    LinearLayout chance4Layout;
-    LinearLayout chance5Layout;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,66 +30,44 @@ public class ChancesListActivity extends AppCompatActivity {
     }
 
     private void initUI() {
-        LayoutInflater inflater = LayoutInflater.from(this);
-        View parentView = findViewById(android.R.id.content);
-        View zoologistFragment = inflater.inflate(R.layout.zoologist_chances_list, (ViewGroup) parentView);
-
-        zoologistFragment.setOnClickListener(new View.OnClickListener() {
+        final ViewPager viewPager = (ViewPager) findViewById(R.id.chanses_rv_container);
+        viewPager.setAdapter(new PagerAdapter() {
             @Override
-            public void onClick(View v) {
+            public int getCount() {
+                return 5;
+            }
 
+            @Override
+            public boolean isViewFromObject(final View view, final Object object) {
+                return view.equals(object);
+            }
+
+            @Override
+            public void destroyItem(final View container, final int position, final Object object) {
+                ((ViewPager) container).removeView((View) object);
+            }
+
+            @Override
+            public Object instantiateItem(final ViewGroup container, final int position) {
+                final View view = LayoutInflater.from(
+                        getBaseContext()).inflate(R.layout.item_vp_list, null, false);
+
+                final RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.rv);
+                recyclerView.setHasFixedSize(true);
+                recyclerView.setLayoutManager(new LinearLayoutManager(
+                                getBaseContext(), LinearLayoutManager.VERTICAL, false
+                        )
+                );
+                recyclerView.setAdapter(new ChancesListActivity.RecycleAdapter());
+
+                container.addView(view);
+                return view;
             }
         });
 
-//        final ViewPager viewPager = (ViewPager) findViewById(R.id.chanses_rv_container);
-//        viewPager.setAdapter(new PagerAdapter() {
-//            @Override
-//            public int getCount() {
-//                return 5;
-//            }
-//
-//            @Override
-//            public boolean isViewFromObject(final View view, final Object object) {
-//                return view.equals(object);
-//            }
-//
-//            @Override
-//            public void destroyItem(final View container, final int position, final Object object) {
-//                ((ViewPager) container).removeView((View) object);
-//            }
-//
-//            @Override
-//            public Object instantiateItem(final ViewGroup container, final int position) {
-//                final View view = LayoutInflater.from(
-//                        getBaseContext()).inflate(R.layout.item_vp_list, null, false);
-//
-//                final RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.rv);
-//                recyclerView.setHasFixedSize(true);
-//                recyclerView.setLayoutManager(new LinearLayoutManager(
-//                                getBaseContext(), LinearLayoutManager.VERTICAL, false
-//                        )
-//                );
-//                recyclerView.setAdapter(new ChancesListActivity.RecycleAdapter());
-//
-//                container.addView(view);
-//                return view;
-//            }
-//        });
-//
-//        final String[] colors = getResources().getStringArray(R.array.default_preview);
+        final String[] colors = getResources().getStringArray(R.array.default_preview);
 
-        chance1Layout = (LinearLayout)findViewById(R.id.chance1_layout);
-        chance2Layout = (LinearLayout)findViewById(R.id.chance2_layout);
-        chance3Layout = (LinearLayout)findViewById(R.id.chance3_layout);
-        chance4Layout = (LinearLayout)findViewById(R.id.chance4_layout);
-        chance5Layout = (LinearLayout)findViewById(R.id.chance5_layout);
 
-        chance1Layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "u clicked on chance !", Toast.LENGTH_LONG).show();
-            }
-        });
     }
     public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHolder> {
 
@@ -115,7 +84,7 @@ public class ChancesListActivity extends AppCompatActivity {
 
         @Override
         public int getItemCount() {
-            return 5;
+            return 20;
         }
 
         public class ViewHolder extends RecyclerView.ViewHolder {

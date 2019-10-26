@@ -69,7 +69,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                                 break;
                             case R.id.btn_vertical_ntb:
                                 startActivity(
-                                        new Intent(MainActivity.this, VerticalNtbActivity.class)
+                                        new Intent(MainActivity.this, ChanceDetailActivity.class)
                                 );
                                 break;
                             case R.id.btn_samples_ntb:
