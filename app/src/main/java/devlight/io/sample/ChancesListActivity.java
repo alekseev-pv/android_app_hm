@@ -30,42 +30,46 @@ public class ChancesListActivity extends AppCompatActivity {
     }
 
     private void initUI() {
-        final ViewPager viewPager = (ViewPager) findViewById(R.id.chanses_rv_container);
-        viewPager.setAdapter(new PagerAdapter() {
-            @Override
-            public int getCount() {
-                return 5;
-            }
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View parentView = findViewById(android.R.id.content);
+        inflater.inflate(R.layout.zoologist_chances_list, (ViewGroup) parentView);
 
-            @Override
-            public boolean isViewFromObject(final View view, final Object object) {
-                return view.equals(object);
-            }
-
-            @Override
-            public void destroyItem(final View container, final int position, final Object object) {
-                ((ViewPager) container).removeView((View) object);
-            }
-
-            @Override
-            public Object instantiateItem(final ViewGroup container, final int position) {
-                final View view = LayoutInflater.from(
-                        getBaseContext()).inflate(R.layout.item_vp_list, null, false);
-
-                final RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.rv);
-                recyclerView.setHasFixedSize(true);
-                recyclerView.setLayoutManager(new LinearLayoutManager(
-                                getBaseContext(), LinearLayoutManager.VERTICAL, false
-                        )
-                );
-                recyclerView.setAdapter(new ChancesListActivity.RecycleAdapter());
-
-                container.addView(view);
-                return view;
-            }
-        });
-
-        final String[] colors = getResources().getStringArray(R.array.default_preview);
+//        final ViewPager viewPager = (ViewPager) findViewById(R.id.chanses_rv_container);
+//        viewPager.setAdapter(new PagerAdapter() {
+//            @Override
+//            public int getCount() {
+//                return 5;
+//            }
+//
+//            @Override
+//            public boolean isViewFromObject(final View view, final Object object) {
+//                return view.equals(object);
+//            }
+//
+//            @Override
+//            public void destroyItem(final View container, final int position, final Object object) {
+//                ((ViewPager) container).removeView((View) object);
+//            }
+//
+//            @Override
+//            public Object instantiateItem(final ViewGroup container, final int position) {
+//                final View view = LayoutInflater.from(
+//                        getBaseContext()).inflate(R.layout.item_vp_list, null, false);
+//
+//                final RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.rv);
+//                recyclerView.setHasFixedSize(true);
+//                recyclerView.setLayoutManager(new LinearLayoutManager(
+//                                getBaseContext(), LinearLayoutManager.VERTICAL, false
+//                        )
+//                );
+//                recyclerView.setAdapter(new ChancesListActivity.RecycleAdapter());
+//
+//                container.addView(view);
+//                return view;
+//            }
+//        });
+//
+//        final String[] colors = getResources().getStringArray(R.array.default_preview);
 
 
     }
