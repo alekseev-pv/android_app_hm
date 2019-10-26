@@ -14,18 +14,17 @@
 
             <ImageView
                 android:id="@+id/backdrop8"
-                layout_collapseMode="pin"
                 android:layout_width="109dp"
                 android:layout_height="match_parent"
                 android:background="#605271"
                 android:fitsSystemWindows="true"
+                android:onClick="onClick"
                 android:padding="32dp"
                 android:src="@drawable/ic_eighth"
                 android:tint="#9f90af" />
 
             <ImageView
                 android:id="@+id/backdrop17"
-                layout_collapseMode="pin"
                 android:layout_width="109dp"
                 android:layout_height="match_parent"
                 android:background="#605271"
@@ -37,7 +36,6 @@
 
             <ImageView
                 android:id="@+id/backdrop19"
-                layout_collapseMode="pin"
                 android:layout_width="109dp"
                 android:layout_height="match_parent"
                 android:background="#605271"
@@ -55,7 +53,6 @@
 
             <ImageView
                 android:id="@+id/backdrop12"
-                layout_collapseMode="pin"
                 android:layout_width="139dp"
                 android:layout_height="match_parent"
                 android:background="#605271"
@@ -66,7 +63,6 @@
 
             <ImageView
                 android:id="@+id/backdrop13"
-                layout_collapseMode="pin"
                 android:layout_width="139dp"
                 android:layout_height="match_parent"
                 android:background="#605271"
@@ -77,7 +73,6 @@
 
             <ImageView
                 android:id="@+id/backdrop14"
-                layout_collapseMode="pin"
                 android:layout_width="139dp"
                 android:layout_height="match_parent"
                 android:background="#605271"

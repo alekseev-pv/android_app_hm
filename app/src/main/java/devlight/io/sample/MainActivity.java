@@ -29,6 +29,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         btnSamplesNtb.setOnClickListener(this);
 
 
+
         startActivity(
                 new Intent(MainActivity.this, HorizontalCoordinatorNtbActivity.class)
         );
@@ -73,7 +74,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                                 break;
                             case R.id.btn_samples_ntb:
                                 startActivity(
-                                        new Intent(MainActivity.this, SamplesNtbActivity.class)
+                                        new Intent(MainActivity.this, ChancesListActivity.class)
                                 );
                                 break;
                             default:
