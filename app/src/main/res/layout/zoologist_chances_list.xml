@@ -49,7 +49,7 @@
             android:layout_height="131dp"
             android:layout_margin="5dp"
             android:background="#605271"
-            android:src="@drawable/facts_ideas" />
+            android:src="@drawable/lamp" />
 
         <TextView
             android:id="@+id/chance1_textView"
@@ -76,7 +76,7 @@
             android:layout_height="131dp"
             android:layout_margin="5dp"
             android:background="#605271"
-            android:src="@drawable/facts_ideas" />
+            android:src="@drawable/lamp" />
 
         <TextView
             android:id="@+id/chance2_textView"
@@ -101,7 +101,7 @@
             android:layout_width="118dp"
             android:layout_height="131dp"
             android:layout_margin="5dp"
-            android:src="@drawable/youtube" />
+            android:src="@drawable/youtube2" />
 
         <TextView
             android:id="@+id/chance3_textView"
@@ -122,12 +122,12 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/chanse3_img2"
+            android:id="@+id/chanse4_img"
             android:layout_width="118dp"
             android:layout_height="131dp"
             android:layout_margin="5dp"
             android:background="#605271"
-            android:src="@drawable/ar" />
+            android:src="@drawable/ar2" />
 
         <LinearLayout
             android:layout_width="match_parent"

@@ -146,35 +146,35 @@ public class HorizontalCoordinatorNtbActivity extends Activity {
 
         final CoordinatorLayout coordinatorLayout = (CoordinatorLayout) findViewById(R.id.parent);
 
-        findViewById(R.id.fab).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(final View v) {
-                for (int i = 0; i < navigationTabBar.getModels().size(); i++) {
-                    final NavigationTabBar.Model model = navigationTabBar.getModels().get(i);
-                    navigationTabBar.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            final String title = String.valueOf(new Random().nextInt(15));
-                            if (!model.isBadgeShowed()) {
-                                model.setBadgeTitle(title);
-                                model.showBadge();
-                            } else model.updateBadgeTitle(title);
-                        }
-                    }, i * 100);
-                }
-
-                coordinatorLayout.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        final Snackbar snackbar = Snackbar.make(navigationTabBar, "Coordinator NTB", Snackbar.LENGTH_SHORT);
-                        snackbar.getView().setBackgroundColor(Color.parseColor("#9b92b3"));
-                        ((TextView) snackbar.getView().findViewById(R.id.snackbar_text))
-                                .setTextColor(Color.parseColor("#423752"));
-                        snackbar.show();
-                    }
-                }, 1000);
-            }
-        });
+//        findViewById(R.id.fab).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(final View v) {
+//                for (int i = 0; i < navigationTabBar.getModels().size(); i++) {
+//                    final NavigationTabBar.Model model = navigationTabBar.getModels().get(i);
+//                    navigationTabBar.postDelayed(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            final String title = String.valueOf(new Random().nextInt(15));
+//                            if (!model.isBadgeShowed()) {
+//                                model.setBadgeTitle(title);
+//                                model.showBadge();
+//                            } else model.updateBadgeTitle(title);
+//                        }
+//                    }, i * 100);
+//                }
+//
+//                coordinatorLayout.postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        final Snackbar snackbar = Snackbar.make(navigationTabBar, "Coordinator NTB", Snackbar.LENGTH_SHORT);
+//                        snackbar.getView().setBackgroundColor(Color.parseColor("#9b92b3"));
+//                        ((TextView) snackbar.getView().findViewById(R.id.snackbar_text))
+//                                .setTextColor(Color.parseColor("#423752"));
+//                        snackbar.show();
+//                    }
+//                }, 1000);
+//            }
+//        });
 
         final CollapsingToolbarLayout collapsingToolbarLayout =
                 (CollapsingToolbarLayout) findViewById(R.id.toolbar);

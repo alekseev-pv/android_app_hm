@@ -1,5 +1,6 @@
 package devlight.io.sample;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.CoordinatorLayout;
@@ -97,6 +98,14 @@ public class ChancesListActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "суксесс", Toast.LENGTH_LONG).show();
+            }
+        });
+        chance4Layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent rhinoIntent = getPackageManager().getLaunchIntentForPackage("com.unity.arfoundation.samplesrino");
+                startActivity(rhinoIntent);
             }
         });
     }

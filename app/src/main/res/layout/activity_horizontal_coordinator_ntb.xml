@@ -13,7 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fitsSystemWindows="true"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:visibility="gone">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/toolbar"
@@ -39,15 +40,8 @@
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_horizontal_ntb"
         android:layout_width="match_parent"
-        android:layout_height="333dp"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Button" />
-    </android.support.v4.view.ViewPager>
+        android:layout_height="651dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
     <devlight.io.library.ntb.NavigationTabBar
         android:id="@+id/ntb_horizontal"
@@ -62,18 +56,5 @@
         app:ntb_badge_use_typeface="true"
         app:ntb_badged="true"
         app:ntb_typeface="fonts/agency.ttf"/>
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="76dp"
-        android:src="@drawable/ic_first"
-        android:tint="#9f90af"
-        android:visibility="invisible"
-        app:backgroundTint="#605271" />
 
 </android.support.design.widget.CoordinatorLayout>
