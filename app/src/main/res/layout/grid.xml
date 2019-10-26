@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/backdrop8"
+                layout_collapseMode="pin"
+                android:layout_width="109dp"
+                android:layout_height="match_parent"
+                android:background="#605271"
+                android:fitsSystemWindows="true"
+                android:padding="32dp"
+                android:src="@drawable/ic_eighth"
+                android:tint="#9f90af" />
+
+            <ImageView
+                android:id="@+id/backdrop17"
+                layout_collapseMode="pin"
+                android:layout_width="109dp"
+                android:layout_height="match_parent"
+                android:background="#605271"
+                android:fitsSystemWindows="true"
+                android:padding="32dp"
+                android:src="@drawable/ic_eighth"
+                android:tint="#9f90af"
+                app:srcCompat="@drawable/ic_fifth" />
+
+            <ImageView
+                android:id="@+id/backdrop19"
+                layout_collapseMode="pin"
+                android:layout_width="109dp"
+                android:layout_height="match_parent"
+                android:background="#605271"
+                android:fitsSystemWindows="true"
+                android:padding="32dp"
+                android:src="@drawable/ic_eighth"
+                android:tint="#9f90af"
+                app:srcCompat="@drawable/ic_sixth" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/backdrop12"
+                layout_collapseMode="pin"
+                android:layout_width="139dp"
+                android:layout_height="match_parent"
+                android:background="#605271"
+                android:fitsSystemWindows="true"
+                android:padding="32dp"
+                android:src="@drawable/ic_eighth"
+                android:tint="#9f90af" />
+
+            <ImageView
+                android:id="@+id/backdrop13"
+                layout_collapseMode="pin"
+                android:layout_width="139dp"
+                android:layout_height="match_parent"
+                android:background="#605271"
+                android:fitsSystemWindows="true"
+                android:padding="32dp"
+                android:src="@drawable/ic_eighth"
+                android:tint="#9f90af" />
+
+            <ImageView
+                android:id="@+id/backdrop14"
+                layout_collapseMode="pin"
+                android:layout_width="139dp"
+                android:layout_height="match_parent"
+                android:background="#605271"
+                android:fitsSystemWindows="true"
+                android:padding="32dp"
+                android:src="@drawable/ic_eighth"
+                android:tint="#9f90af" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableLayout>
+</LinearLayout>

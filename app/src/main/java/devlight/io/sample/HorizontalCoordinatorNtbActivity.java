@@ -53,8 +53,8 @@ public class HorizontalCoordinatorNtbActivity extends Activity {
             @Override
             public Object instantiateItem(final ViewGroup container, final int position) {
                 final View view = LayoutInflater.from(
-                        getBaseContext()).inflate(R.layout.item_vp_list, null, false);
-
+                        getBaseContext()).inflate(R.layout.grid, null, false);
+/*
                 final RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.rv);
                 recyclerView.setHasFixedSize(true);
                 recyclerView.setLayoutManager(new LinearLayoutManager(
@@ -62,7 +62,7 @@ public class HorizontalCoordinatorNtbActivity extends Activity {
                         )
                 );
                 recyclerView.setAdapter(new RecycleAdapter());
-
+*/
                 container.addView(view);
                 return view;
             }

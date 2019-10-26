@@ -11,14 +11,14 @@
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="wrap_content"
         android:fitsSystemWindows="true"
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="17dp"
             android:fitsSystemWindows="true"
             app:contentScrim="#605271"
             app:expandedTitleTextAppearance="@null"
@@ -38,8 +38,8 @@
 
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_horizontal_ntb"
-        android:layout_width="25dp"
-        android:layout_height="33dp"
+        android:layout_width="match_parent"
+        android:layout_height="333dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     <devlight.io.library.ntb.NavigationTabBar
@@ -68,84 +68,5 @@
         android:tint="#9f90af"
         android:visibility="invisible"
         app:backgroundTint="#605271" />
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <ImageView
-                android:id="@+id/backdrop8"
-                android:layout_width="109dp"
-                android:layout_height="match_parent"
-                android:background="#605271"
-                android:fitsSystemWindows="true"
-                android:padding="32dp"
-                android:src="@drawable/ic_eighth"
-                android:tint="#9f90af"
-                app:layout_collapseMode="pin" />
-
-            <ImageView
-                android:id="@+id/backdrop17"
-                android:layout_width="109dp"
-                android:layout_height="match_parent"
-                android:background="#605271"
-                android:fitsSystemWindows="true"
-                android:padding="32dp"
-                android:src="@drawable/ic_eighth"
-                android:tint="#9f90af"
-                app:layout_collapseMode="pin" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <ImageView
-                android:id="@+id/backdrop12"
-                android:layout_width="139dp"
-                android:layout_height="match_parent"
-                android:background="#605271"
-                android:fitsSystemWindows="true"
-                android:padding="32dp"
-                android:src="@drawable/ic_eighth"
-                android:tint="#9f90af"
-                app:layout_collapseMode="pin" />
-
-            <ImageView
-                android:id="@+id/backdrop13"
-                android:layout_width="139dp"
-                android:layout_height="match_parent"
-                android:background="#605271"
-                android:fitsSystemWindows="true"
-                android:padding="32dp"
-                android:src="@drawable/ic_eighth"
-                android:tint="#9f90af"
-                app:layout_collapseMode="pin" />
-
-            <ImageView
-                android:id="@+id/backdrop14"
-                android:layout_width="139dp"
-                android:layout_height="match_parent"
-                android:background="#605271"
-                android:fitsSystemWindows="true"
-                android:padding="32dp"
-                android:src="@drawable/ic_eighth"
-                android:tint="#9f90af"
-                app:layout_collapseMode="pin" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </TableLayout>
 
 </android.support.design.widget.CoordinatorLayout>
