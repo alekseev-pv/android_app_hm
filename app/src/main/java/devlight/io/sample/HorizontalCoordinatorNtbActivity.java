@@ -47,19 +47,33 @@ public class HorizontalCoordinatorNtbActivity extends Activity {
             }
         });
 
-        View b8 = (View) findViewById(R.id.backdrop8);
+        View b8 = (View) findViewById(R.id.textView6);
+
+  //      b8.setBackgroundColor(Color.parseColor("#95D842"));
+
+        Bundle extras = getIntent().getExtras();
+        if(extras != null)
+        {
+            b8.setBackgroundColor(Color.parseColor("#95D842"));
+        }
 
         b8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
               //   Toast.makeText(getApplicationContext(), "we click b8 !", Toast.LENGTH_LONG).show();
-
-                startActivity(
+           startActivity(
                         new Intent(HorizontalCoordinatorNtbActivity.this, ChancesListActivity.class)
                 );
+
             }
         });
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        View b89 = (View) findViewById(R.id.textView6);
+        b89.setBackgroundColor(Color.parseColor("#95D842"));
     }
 
     private void initUI() {

@@ -110,6 +110,19 @@ public class ChancesListActivity extends AppCompatActivity {
             }
         });
 
+        chance3Layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(
+                        new Intent(ChancesListActivity.this, ChanceDetailActivity.class)
+                );
+
+            }
+        });
+
+
+
     }
     public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHolder> {
 

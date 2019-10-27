@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">NavigationTabBar</string>
+    <string name="title_activity_chance">activity_chance</string>
 
 </resources>

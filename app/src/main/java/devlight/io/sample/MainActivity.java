@@ -29,10 +29,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
         btnSamplesNtb.setOnClickListener(this);
 
 
-
         startActivity(
                 new Intent(MainActivity.this, HorizontalCoordinatorNtbActivity.class)
         );
+
+
+
 
     }
 
